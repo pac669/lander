@@ -1,0 +1,81 @@
+body, html{
+	height: 100%;
+	padding: 0px;
+	margin: 0px;
+}
+
+.izquierda{
+	background-color: black;
+	z-index: 7;
+}
+.centro{
+	
+	background-repeat: repeat-y;
+	background-position: right top;
+	overflow-x: visible;
+	z-index: 8;
+}
+
+@media screen and (min-width: 720px){
+	.centro{
+		background-image: url("../img/espacio_h.png");
+	}
+	.suelo{
+		background-image: url("../img/luna_h.png");
+	}
+}
+@media screen and (max-width: 719px){
+	.centro{
+		background-image: url("../img/espacio_v.png");
+	}
+	.suelo{
+		background-image: url("../img/luna_v.png");
+	}
+}
+
+.derecha{
+	background-color: black;
+	z-index: 6;
+}
+
+.derecha,.izquierda,.centro{
+	display: inline-block;
+	width: 33.33%;
+	height: 100%;
+	float: left;
+}
+
+.suelo{
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	height: 10%;
+	width: 100%;
+	position: fixed;
+	bottom: 0px;
+	z-index: 9;
+}
+
+.suelo img{
+	max-width: 100%;
+	height: auto;
+	
+}
+
+#cohete img{
+	
+	height: 100%;
+}
+
+#cohete{
+	text-align:center;
+	position:fixed;
+	top:5%;
+	width:100%;
+	height:20%;
+	z-index: 10;
+}
+ul li{
+	list-style-type: none;
+	color:white;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
